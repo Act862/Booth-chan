@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dd:/Booth-chan/Booth-chan
 Eclock
-Z1 w1530696743
+Z1 w1530696951
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
 Z4 8clock.vhd
 Z5 Fclock.vhd
 l0
-L14
-V8AbzKf6F8bRfBG9EJSWhL1
-!s100 l0GWe7;Z3QWg2hN?bcAoz3
+L4
+V1fkHKY85CjlzMTj@nnfBG0
+!s100 ON0ifS=e5a4kaAJhi43ND0
 Z6 OP;C;10.4a;61
 32
-Z7 !s110 1530696746
+Z7 !s110 1530702741
 !i10b 1
-Z8 !s108 1530696746.000000
+Z8 !s108 1530702741.000000
 Z9 !s90 -reportprogress|300|clock.vhd|
 Z10 !s107 clock.vhd|
 !i113 1
@@ -32,11 +32,11 @@ Z11 tExplicit 1
 Abehavioral
 R2
 R3
-DEx4 work 5 clock 0 22 8AbzKf6F8bRfBG9EJSWhL1
-l20
-L19
-VDn`HETilkcF6Uf?D;Jd5j1
-!s100 EdSz[mLP?CU=jmaIa;@>Y2
+DEx4 work 5 clock 0 22 1fkHKY85CjlzMTj@nnfBG0
+l10
+L9
+VOCkiE=J[3j:ME^XgC:84M0
+!s100 ZGFMB7gIm=1o>RI<>PhoK0
 R6
 32
 R7
@@ -86,32 +86,71 @@ R18
 !i113 1
 o-O0
 R11
-Elock
-Z19 w1530695175
-Z20 DPx4 work 8 lock_pkg 0 22 Y3JDbi2>0Y?gjc9emlRel0
-Z21 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Edff
+Z19 w1530702530
 R2
 R3
 R0
-Z22 8lock.vhd
-Z23 Flock.vhd
+Z20 8dff.vhd
+Z21 Fdff.vhd
+l0
+L6
+V4`]0WkVbTCNn_RNUR2flz1
+!s100 fLTUX_M7^08zA[VgI^N@Y3
+R6
+32
+Z22 !s110 1530702745
+!i10b 1
+Z23 !s108 1530702745.000000
+Z24 !s90 -reportprogress|300|dff.vhd|
+Z25 !s107 dff.vhd|
+!i113 1
+o-O0
+R11
+Astructural
+R2
+R3
+DEx4 work 3 dff 0 22 4`]0WkVbTCNn_RNUR2flz1
+l32
+L13
+VQ68YiYLi7[hcI;SC9Ea>^3
+!s100 z_U3JfazM<;zIj5ZKTnCi1
+R6
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+o-O0
+R11
+Elock
+Z26 w1530695175
+Z27 DPx4 work 8 lock_pkg 0 22 Y3JDbi2>0Y?gjc9emlRel0
+Z28 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z29 8lock.vhd
+Z30 Flock.vhd
 l0
 L6
 V]7:dfPEIjQmOaMZ<gYKDc1
 !s100 @@TEdSC8i4`Fj<`RgEEW[1
 R6
 32
-Z24 !s110 1530695519
+Z31 !s110 1530695519
 !i10b 1
-Z25 !s108 1530695519.000000
-Z26 !s90 -reportprogress|300|-check_synthesis|lock.vhd|
-Z27 !s107 lock.vhd|
+Z32 !s108 1530695519.000000
+Z33 !s90 -reportprogress|300|-check_synthesis|lock.vhd|
+Z34 !s107 lock.vhd|
 !i113 1
-Z28 o-check_synthesis -O0
+Z35 o-check_synthesis -O0
 R11
 Artl
-R20
-R21
+R27
+R28
 R2
 R3
 DEx4 work 4 lock 0 22 ]7:dfPEIjQmOaMZ<gYKDc1
@@ -121,13 +160,13 @@ V1TAAJJbbSHM^d1RXR62gi0
 !s100 I^97>>kN2@@L1>a]>eOGU3
 R6
 32
-R24
+R31
 !i10b 1
-R25
-R26
-R27
+R32
+R33
+R34
 !i113 1
-R28
+R35
 R11
 Plock_pkg
 w1530695169
@@ -145,6 +184,45 @@ R6
 !s108 1530695505.000000
 !s90 -reportprogress|300|lock_pkg.vhd|
 !s107 lock_pkg.vhd|
+!i113 1
+o-O0
+R11
+Enand2
+Z36 w1530702539
+R2
+R3
+R0
+Z37 8nand2.vhd
+Z38 Fnand2.vhd
+l0
+L5
+Vl@6C`]WC:_aZ>L1SG<@P73
+!s100 ]kjTnST?A327UbO6Am1^e3
+R6
+32
+Z39 !s110 1530702735
+!i10b 1
+Z40 !s108 1530702735.000000
+Z41 !s90 -reportprogress|300|nand2.vhd|
+Z42 !s107 nand2.vhd|
+!i113 1
+o-O0
+R11
+Adataflow
+R2
+R3
+DEx4 work 5 nand2 0 22 l@6C`]WC:_aZ>L1SG<@P73
+l12
+L11
+VHKXX1I_<5L5RPD8X4XYE:3
+!s100 JlJBko8ARC<k6<lR4>@]F1
+R6
+32
+R39
+!i10b 1
+R40
+R41
+R42
 !i113 1
 o-O0
 R11
