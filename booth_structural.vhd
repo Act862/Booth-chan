@@ -48,7 +48,7 @@ end component;
 -- by adding a shift register we could instantly complete both 
 -- tasks of saving to register and shifting, for the next check
 
-signal complement_m: std_logic_vector(3 downto 0); --> signal to hold the 10 option of the algorithm
+signal complement_m: std_logic_vector(3 downto 0); --> signal to hold the "10" option of the algorithm
 -- signal acc: std_logic_vector(3 downto 0); ---> we need a memory element for this part of the circuit
 signal aqqm: std_logic_vector(8 downto 0);	--	produced by other elements, so holds non stable value, no need to be saved
 signal qm: std_logic;
