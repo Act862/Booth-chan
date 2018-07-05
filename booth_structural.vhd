@@ -1,24 +1,19 @@
 --	this is the structural implementation of the booth algorithm
-
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity strctl_booth is
+entity str_booth is
 	port
 	(
-		--	the inputs are
+		size: in std_logic_vector(3 downto 0);
 		q, m: in std_logic_vector(3 downto 0);
-		
-		--	the outputs are
 		result: out std_logic_vector(7 downto 0)
 	);
-end strctl_booth;
+end str_booth;
 
-architecture structural of strctl_booth is
+architecture structural of str_booth is
 
---	the components of our circuit are...
-
---	a clock for synchronization
+-- components
 component clock
 	port
 	(
@@ -26,42 +21,55 @@ component clock
 	);
 end component;
 
---	the adder for adding the Accumulator
-component full_adder_4bit
+component pipo
 	port
 	(
-		a, b: in std_logic_vector(3 downto 0);
-		cin: in std_logic;
-		sum: out std_logic_vector(4 downto 0);
-		carry: inout std_logic
-	);
-end component;
-
-component complement
-	port(
-		input: in std_logic_vector(3 downto 0);
-		output: out std_logic_vector(3 downto 0)
-	);
-end component;
-
-component pipo
-	port(
 		clk, reset: in std_logic;
 		data_in: in std_logic_vector(3 downto 0);
 		data_out: out std_logic_vector(3 downto 0)
 	);
 end component;
 
--- we could also add instead of a signal acc, a shift register
--- by adding a shift register we could instantly complete both 
--- tasks of saving to register and shifting, for the next check
+component right_shifter
+	port
+	(
+		input: in std_logic_vector(8 downto 0);
+		output: out std_logic_vector(8 downto 0)
+	);
+end component;
 
-signal complement_m: std_logic_vector(3 downto 0); --> signal to hold the "10" option of the algorithm
--- signal acc: std_logic_vector(3 downto 0); ---> we need a memory element for this part of the circuit
-signal clk: std_logic;
-signal aqqm: std_logic_vector(8 downto 0);	--	produced by other elements, so holds non stable value, no need to be saved
-signal qm: std_logic;
+component mux2to1
+	port
+	(
+		a, b: in std_logic;
+		slc: in std_logic;
+		output: out std_logic
+	);
+end component;
 
-begin
-	clock_out: port map(clk);
-	
+component full_adder_4bit
+	port
+	(
+	);
+end component;
+
+component subtractor_4bit
+	port
+	(
+	);
+end component;
+
+component mux4to1
+	port
+	(
+		a, b: in std_logic_vector(3 downto 0);
+		slc: in std_logic_vector(1 downto 0);
+		output: out std_logic_vector(3 downto 0)
+	);
+end component;
+
+component reverse_counter
+	port
+	(
+	);
+end component;
