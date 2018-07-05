@@ -33,19 +33,30 @@ component pipo
 	);
 end component;
 
+component right_shifter
+	port
+	(
+		input: in std_logic_vector(8 downto 0);
+		output: out std_logic_vector(8 downto 0)
+	);
+end component;
+
 -- signal declarations.
 signal clk: std_logic;
-
+signal conc: std_logic_vector(8 downto 0);
 
 begin
 	-- processes, procedures, port mapping, etc.
 	clock_output: clock port map(clk);
-	
+	shift: right_shifter port map(conc, conc);
 	-- note that the process as a whole, runs concurrently with the rest of the code.
 	process(q, m)
 		-- variable declaration block
 		variable N: integer range 0 to 3;
+		variable A: std_logic_vector(0 to 4);
 	begin
+		qm <= '0';
+		conc <= A & q & qm
 		while(N < 4) loop
 			if((q(0) & qm) = "01") then
 				-- A = A + M

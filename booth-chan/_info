@@ -36,7 +36,7 @@ R2
 R3
 R4
 R5
-Z14 DEx4 work 4 algo 0 22 JLjVhemNjMg2o2gFCA:3C0
+DEx4 work 4 algo 0 22 JLjVhemNjMg2o2gFCA:3C0
 l19
 L16
 V<8joa71zJ;RbUnMlW;ANO0
@@ -51,24 +51,63 @@ R12
 !i113 1
 o-O0
 R13
-Eclock
-Z15 w1530696951
+Echeck
+Z14 w1530782511
 R4
 R5
 R0
-Z16 8clock.vhd
-Z17 Fclock.vhd
+Z15 8example.vhd
+Z16 Fexample.vhd
+l0
+L5
+ViM@gA@5TgmD=9_;[G6c<U0
+!s100 <X]<T`Xhkf8=g>1?DfQi20
+R8
+32
+Z17 !s110 1530782532
+!i10b 1
+Z18 !s108 1530782532.000000
+Z19 !s90 -reportprogress|300|example.vhd|
+Z20 !s107 example.vhd|
+!i113 1
+o-O0
+R13
+Aexecution
+R4
+R5
+DEx4 work 5 check 0 22 iM@gA@5TgmD=9_;[G6c<U0
+l19
+L8
+V7FBo254VAS>:T_OINlAZ=1
+!s100 `E;[GXcbj5<F=`>[ejaKN0
+R8
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+o-O0
+R13
+Eclock
+Z21 w1530696951
+R4
+R5
+R0
+Z22 8clock.vhd
+Z23 Fclock.vhd
 l0
 L4
 V1fkHKY85CjlzMTj@nnfBG0
 !s100 ON0ifS=e5a4kaAJhi43ND0
 R8
 32
-Z18 !s110 1530702741
+Z24 !s110 1530702741
 !i10b 1
-Z19 !s108 1530702741.000000
-Z20 !s90 -reportprogress|300|clock.vhd|
-Z21 !s107 clock.vhd|
+Z25 !s108 1530702741.000000
+Z26 !s90 -reportprogress|300|clock.vhd|
+Z27 !s107 clock.vhd|
 !i113 1
 o-O0
 R13
@@ -82,32 +121,32 @@ VOCkiE=J[3j:ME^XgC:84M0
 !s100 ZGFMB7gIm=1o>RI<>PhoK0
 R8
 32
-R18
+R24
 !i10b 1
-R19
-R20
-R21
+R25
+R26
+R27
 !i113 1
 o-O0
 R13
 Econc
-Z22 w1530692376
+Z28 w1530692376
 R4
 R5
 R0
-Z23 8conc.vhd
-Z24 Fconc.vhd
+Z29 8conc.vhd
+Z30 Fconc.vhd
 l0
 L4
 VlPf2[4PoZ;L3ME?<nW<Za0
 !s100 clf4HLFKd6ZDJkG9`n6Vd3
 R8
 32
-Z25 !s110 1530696108
+Z31 !s110 1530696108
 !i10b 1
-Z26 !s108 1530696108.000000
-Z27 !s90 -reportprogress|300|conc.vhd|
-Z28 !s107 conc.vhd|
+Z32 !s108 1530696108.000000
+Z33 !s90 -reportprogress|300|conc.vhd|
+Z34 !s107 conc.vhd|
 !i113 1
 o-O0
 R13
@@ -121,32 +160,32 @@ VmGA>1_n375<nEdaDig72J1
 !s100 LLbQKA?Cze6`;f?Jh:XLJ1
 R8
 32
-R25
+R31
 !i10b 1
-R26
-R27
-R28
+R32
+R33
+R34
 !i113 1
 o-O0
 R13
 Edff
-Z29 w1530702530
+Z35 w1530702530
 R4
 R5
 R0
-Z30 8dff.vhd
-Z31 Fdff.vhd
+Z36 8dff.vhd
+Z37 Fdff.vhd
 l0
 L6
 V4`]0WkVbTCNn_RNUR2flz1
 !s100 fLTUX_M7^08zA[VgI^N@Y3
 R8
 32
-Z32 !s110 1530702745
+Z38 !s110 1530702745
 !i10b 1
-Z33 !s108 1530702745.000000
-Z34 !s90 -reportprogress|300|dff.vhd|
-Z35 !s107 dff.vhd|
+Z39 !s108 1530702745.000000
+Z40 !s90 -reportprogress|300|dff.vhd|
+Z41 !s107 dff.vhd|
 !i113 1
 o-O0
 R13
@@ -160,39 +199,39 @@ VQ68YiYLi7[hcI;SC9Ea>^3
 !s100 z_U3JfazM<;zIj5ZKTnCi1
 R8
 32
-R32
+R38
 !i10b 1
-R33
-R34
-R35
+R39
+R40
+R41
 !i113 1
 o-O0
 R13
 Elock
-Z36 w1530695175
-Z37 DPx4 work 8 lock_pkg 0 22 Y3JDbi2>0Y?gjc9emlRel0
+Z42 w1530695175
+Z43 DPx4 work 8 lock_pkg 0 22 Y3JDbi2>0Y?gjc9emlRel0
 R3
 R4
 R5
 R0
-Z38 8lock.vhd
-Z39 Flock.vhd
+Z44 8lock.vhd
+Z45 Flock.vhd
 l0
 L6
 V]7:dfPEIjQmOaMZ<gYKDc1
 !s100 @@TEdSC8i4`Fj<`RgEEW[1
 R8
 32
-Z40 !s110 1530695519
+Z46 !s110 1530695519
 !i10b 1
-Z41 !s108 1530695519.000000
-Z42 !s90 -reportprogress|300|-check_synthesis|lock.vhd|
-Z43 !s107 lock.vhd|
+Z47 !s108 1530695519.000000
+Z48 !s90 -reportprogress|300|-check_synthesis|lock.vhd|
+Z49 !s107 lock.vhd|
 !i113 1
-Z44 o-check_synthesis -O0
+Z50 o-check_synthesis -O0
 R13
 Artl
-R37
+R43
 R3
 R4
 R5
@@ -203,13 +242,13 @@ V1TAAJJbbSHM^d1RXR62gi0
 !s100 I^97>>kN2@@L1>a]>eOGU3
 R8
 32
-R40
+R46
 !i10b 1
-R41
-R42
-R43
+R47
+R48
+R49
 !i113 1
-R44
+R50
 R13
 Plock_pkg
 w1530695169
@@ -231,23 +270,23 @@ R8
 o-O0
 R13
 Enand2
-Z45 w1530702539
+Z51 w1530702539
 R4
 R5
 R0
-Z46 8nand2.vhd
-Z47 Fnand2.vhd
+Z52 8nand2.vhd
+Z53 Fnand2.vhd
 l0
 L5
 Vl@6C`]WC:_aZ>L1SG<@P73
 !s100 ]kjTnST?A327UbO6Am1^e3
 R8
 32
-Z48 !s110 1530702735
+Z54 !s110 1530702735
 !i10b 1
-Z49 !s108 1530702735.000000
-Z50 !s90 -reportprogress|300|nand2.vhd|
-Z51 !s107 nand2.vhd|
+Z55 !s108 1530702735.000000
+Z56 !s90 -reportprogress|300|nand2.vhd|
+Z57 !s107 nand2.vhd|
 !i113 1
 o-O0
 R13
@@ -261,11 +300,50 @@ VHKXX1I_<5L5RPD8X4XYE:3
 !s100 JlJBko8ARC<k6<lR4>@]F1
 R8
 32
-R48
+R54
 !i10b 1
-R49
-R50
-R51
+R55
+R56
+R57
+!i113 1
+o-O0
+R13
+Eright_shifter
+Z58 w1530784073
+R4
+R5
+R0
+Z59 8right_shifter.vhd
+Z60 Fright_shifter.vhd
+l0
+L4
+Vo6MLW<Il9>QIYZhPzBBzi2
+!s100 ]`acK[j6]zF3NMPmKz]621
+R8
+32
+Z61 !s110 1530784090
+!i10b 1
+Z62 !s108 1530784090.000000
+Z63 !s90 -reportprogress|300|right_shifter.vhd|
+Z64 !s107 right_shifter.vhd|
+!i113 1
+o-O0
+R13
+Adataflow
+R4
+R5
+DEx4 work 13 right_shifter 0 22 o6MLW<Il9>QIYZhPzBBzi2
+l16
+L12
+Vn66gJE<czPkOdS=NB]KMC1
+!s100 MM[31Rl`aEHo5>5_mKaQS0
+R8
+32
+R61
+!i10b 1
+R62
+R63
+R64
 !i113 1
 o-O0
 R13
@@ -274,8 +352,8 @@ w1530696280
 R4
 R5
 R0
-R16
-R17
+R22
+R23
 l0
 L4
 V`2B?R[P?Y@KSg3@1GfC^H2
@@ -285,8 +363,8 @@ R8
 !s110 1530696285
 !i10b 1
 !s108 1530696285.000000
-R20
-R21
+R26
+R27
 !i113 1
 o-O0
 R13
