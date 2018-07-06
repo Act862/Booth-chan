@@ -5,7 +5,7 @@ use ieee.std_logic_1164.all;
 entity str_booth is
 	port
 	(
-		size: in std_logic_vector(3 downto 0);
+		size: inout std_logic_vector(3 downto 0);
 		q, m: in std_logic_vector(3 downto 0);
 		set_rc: in std_logic;
 		result: out std_logic_vector(7 downto 0)
@@ -103,5 +103,5 @@ begin
 	s2: mux4to1 port map(pipo_out, sum_res, sub_res, pipo_out, conc(1 downto 0), A_new);
 	c2: conc <= A_new & conc(4 downto 0);
 	shift: right_shifter port map(conc, conc);
-	phase_result <= conc;
+	phase_result <= conc(8 downto 5);
 end structural;
