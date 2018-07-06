@@ -1,7 +1,0 @@
-vcom fsm1.vhd
-vcom fsm1_tb.vhd
-
-vsim fsm1_tb
-add wave *
-
-run 1200
