@@ -308,24 +308,67 @@ R57
 !i113 1
 o-O0
 R13
-Eright_shifter
-Z58 w1530784073
+Ereverse_counter
+Z58 w1530867921
+Z59 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
 R4
 R5
 R0
-Z59 8right_shifter.vhd
-Z60 Fright_shifter.vhd
+Z60 8reverse_counter.vhd
+Z61 Freverse_counter.vhd
+l0
+L9
+V7HHQLMW?zg2Db=]=Q[NDd2
+!s100 h7=5kcfKjofBZei7SNWB>3
+R8
+32
+Z62 !s110 1530867924
+!i10b 1
+Z63 !s108 1530867924.000000
+Z64 !s90 -reportprogress|300|reverse_counter.vhd|
+Z65 !s107 reverse_counter.vhd|
+!i113 1
+o-O0
+R13
+Abehavioral
+R59
+R2
+R4
+R5
+DEx4 work 15 reverse_counter 0 22 7HHQLMW?zg2Db=]=Q[NDd2
+l31
+L19
+Vb3?Phce8VTYciSd?JUBS42
+!s100 8FT`C9A8I?[1O>B^S_agL1
+R8
+32
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+o-O0
+R13
+Eright_shifter
+Z66 w1530784073
+R4
+R5
+R0
+Z67 8right_shifter.vhd
+Z68 Fright_shifter.vhd
 l0
 L4
 Vo6MLW<Il9>QIYZhPzBBzi2
 !s100 ]`acK[j6]zF3NMPmKz]621
 R8
 32
-Z61 !s110 1530784090
+Z69 !s110 1530784090
 !i10b 1
-Z62 !s108 1530784090.000000
-Z63 !s90 -reportprogress|300|right_shifter.vhd|
-Z64 !s107 right_shifter.vhd|
+Z70 !s108 1530784090.000000
+Z71 !s90 -reportprogress|300|right_shifter.vhd|
+Z72 !s107 right_shifter.vhd|
 !i113 1
 o-O0
 R13
@@ -339,11 +382,11 @@ Vn66gJE<czPkOdS=NB]KMC1
 !s100 MM[31Rl`aEHo5>5_mKaQS0
 R8
 32
-R61
+R69
 !i10b 1
-R62
-R63
-R64
+R70
+R71
+R72
 !i113 1
 o-O0
 R13
