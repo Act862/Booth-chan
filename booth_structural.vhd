@@ -51,8 +51,7 @@ end component;
 component full_adder_4bit
 	port
 	(
-		a, b: std_logic_vector(3 downto 0);
-		carry_in: std_logic;
+		a, b: in std_logic_vector(3 downto 0);
 		result: out std_logic_vector(3 downto 0)
 	);
 end component;
@@ -80,12 +79,12 @@ component reverse_counter
 		number: in std_logic_vector(3 downto 0);
 		reset: in std_logic;
 		output: out std_logic_vector(3 downto 0);
-		zero: out std_logic
+		zero: inout std_logic
 	);
 end component;
 
 -- signal declarations
-signal clk: std_logic;
+signal clk, carry_out: std_logic;
 signal qm: std_logic := '0';
 signal select1, continue: std_logic;
 signal phase_result: std_logic_vector(3 downto 0) := "0000";
@@ -97,7 +96,7 @@ begin
 	count: reverse_counter port map(size, set_rc, size, continue);
 	s1: mux2to1 port map(clk, '0', continue, select1);
 	acc: pipo port map(select1, set_rc, phase_result, pipo_out);
-	sum: full_adder_4bit port map(pipo_out, m, '0', sum_res); 
+	sum: full_adder_4bit port map(pipo_out, m, sum_res); 
 	sub: subtractor_4bit port map(pipo_out, m, sub_res);
 	c: conc <= pipo_out & q & qm;
 	s2: mux4to1 port map(pipo_out, sum_res, sub_res, pipo_out, conc(1 downto 0), A_new);

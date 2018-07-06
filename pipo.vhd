@@ -17,7 +17,7 @@ begin
 		begin
 			if(reset = '1') then
 				data_out <= "0000";
-			else(rising_edge(clk)) then
+			elsif(rising_edge(clk)) then
 				data_out <= data_in;
 			end if;
 		end process pipo;
