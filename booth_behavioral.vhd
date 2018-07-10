@@ -1,3 +1,6 @@
+--	Referenced code from: https://www.scribd.com/doc/67719585/Booth-Multiplier-Vhdl-Code
+--	Thank you for the inspiration.
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;

@@ -87,10 +87,11 @@ end component;
 -- signals
 signal clk, zero: std_logic;
 signal count: std_logic_vector(7 downto 0);
-
+signal output: std_logic_vector(7 downto 0);
 -- implementation
 begin
 	clk_out: clock port map(clk);
 	rs: reverse_counter port map(nobits, clk, set_rc, count, zero);
+	reg: pipo port map(clk, set_rc, (others => '0'), output);
 	
 end structural;

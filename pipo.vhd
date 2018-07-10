@@ -6,8 +6,8 @@ entity pipo is
 	port
 	(
 		clk, reset: in std_logic;
-		data_in: in std_logic_vector(3 downto 0);
-		data_out: out std_logic_vector(3 downto 0)
+		data_in: in std_logic_vector(7 downto 0);
+		data_out: out std_logic_vector(7 downto 0)
 	);
 end pipo;
 
@@ -16,7 +16,7 @@ begin
 	pipo: process(clk, data_in, reset) is
 		begin
 			if(reset = '1') then
-				data_out <= "0000";
+				data_out <= (others => '0');
 			elsif(rising_edge(clk)) then
 				data_out <= data_in;
 			end if;
