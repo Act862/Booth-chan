@@ -1,22 +1,19 @@
--- library in use.
 library ieee;
--- packages used from the said library.
 use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
 
---	entity declaration, top level of the current file.
 entity mult is
 	port
 	(
-		-- the inputs are...
-		q, m: in std_logic_vector(3 downto 0);
-		
-		-- the output is...
-		r: out std_logic_vector(7 downto 0)
+		q, m: in std_logic_vector(7 downto 0);
+		output: out std_logic_vector(15 downto 0);
+		obs: out std_logic_vector(15 downto 0)
 	);
 end mult;
 
 architecture behavioral of mult is
--- component declarations.
+
+--	componentns
 component clock
 	port
 	(
@@ -24,50 +21,44 @@ component clock
 	);
 end component;
 
-component pipo
-	port
-	(
-		clk, reset: in std_logic;
-		data_in: in std_logic_vector(3 downto 0);
-		data_out: out std_logic_vector(3 downto 0)
-	);
-end component;
-
-component right_shifter
-	port
-	(
-		input: in std_logic_vector(8 downto 0);
-		output: out std_logic_vector(8 downto 0)
-	);
-end component;
-
--- signal declarations.
+--	signals
 signal clk: std_logic;
-signal conc: std_logic_vector(8 downto 0);
 
+--	implementation
 begin
-	-- processes, procedures, port mapping, etc.
-	clock_output: clock port map(clk);
-	shift: right_shifter port map(conc, conc);
-	-- note that the process as a whole, runs concurrently with the rest of the code.
-	process(q, m)
-		-- variable declaration block
-		variable N: integer range 0 to 3;
-		variable A: std_logic_vector(0 to 4);
+
+	clk_out: clock port map(clk);
+	
+	--	our process is clock sensitive. It runs everytime the clock signal changes.
+	process(clk)
+		--	variable declaration
+		variable mn, cm: std_logic_vector(7 downto 0);
+		variable aq: std_logic_vector(15 downto 0);
+		variable qm: std_logic;
+	
 	begin
-		qm <= '0';
-		conc <= A & q & qm
-		while(N < 4) loop
-			if((q(0) & qm) = "01") then
-				-- A = A + M
-			elsif((q(0) & qm) = "10") then
-				-- A = A - M
-			end if;
-			--	shift the concatenation of AQQm to the right by 1.
-			--	decrease the N.
-			N := N - 1;
-			--	continue to the next statement.
-		end loop;
+		if(clk'event and clk = '1') then
+			aq(15 downto 0) := (others=>'0');
+			aq(7 downto 0) := q;
+			mn := m;
+			cm := not(m) + '1';
+			qm := '0';
+			obs <= aq;
+		else
+			for i in 7 downto 0 loop
+				--	now we check the four states
+				if(aq(0) = '0' and qm = '1') then
+					--	A = A + M
+					aq(15 downto 8) := aq(15 downto 8) + mn;
+				elsif(aq(0) = '1' and qm = '0') then
+					--	A = A - M
+					aq(15 downto 8) := aq(15 downto 8) + cm;
+				end if;
+				--	then shift aqqm to the right by 1 and decrease the counter
+				qm := aq(0);
+				aq(14 downto 0) := aq(15 downto 1);
+			end loop;
+			output <= aq;
+		end if;
 	end process;
-	--	concurrent signals and components.
 end behavioral;
