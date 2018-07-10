@@ -1,6 +1,3 @@
---	Referenced code from: https://www.scribd.com/doc/67719585/Booth-Multiplier-Vhdl-Code
---	Thank you for the inspiration.
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -9,8 +6,7 @@ entity mult is
 	port
 	(
 		q, m: in std_logic_vector(7 downto 0);
-		output: out std_logic_vector(15 downto 0);
-		obs: out std_logic_vector(15 downto 0)
+		output: out std_logic_vector(15 downto 0)
 	);
 end mult;
 
@@ -40,13 +36,12 @@ begin
 		variable qm: std_logic;
 	
 	begin
-		if(clk'event and clk = '1') then
+		if(clk'eventc and clk = '1') then
 			aq(15 downto 0) := (others=>'0');
 			aq(7 downto 0) := q;
 			mn := m;
 			cm := not(m) + '1';
 			qm := '0';
-			obs <= aq;
 		else
 			for i in 7 downto 0 loop
 				--	now we check the four states
