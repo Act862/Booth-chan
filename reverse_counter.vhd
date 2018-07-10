@@ -9,27 +9,18 @@ use ieee.std_logic_unsigned.all;
 entity reverse_counter is
 	port
 	(
-		number: in std_logic_vector(3 downto 0);
-		reset: in std_logic;
-		output: out std_logic_vector(3 downto 0);
+		number: in std_logic_vector(7 downto 0);
+		clk, reset: in std_logic;
+		output: out std_logic_vector(7 downto 0);
 		zero: inout std_logic
 	);
 end reverse_counter;
 
 architecture behavioral of reverse_counter is
 
-component clock
-	port
-	(
-		clk: out std_logic
-	);
-end component;
-
-signal temp: std_logic_vector(3 downto 0);
-signal clk: std_logic;
+signal temp: std_logic_vector(7 downto 0);
 
 begin
-	clk_out: clock port map(clk);
 	process(clk, reset)
 	begin
 		if reset = '1' then
