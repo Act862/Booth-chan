@@ -27,8 +27,8 @@ component pipo
 	port
 	(
 		clk, reset: in std_logic;
-		data_in: in std_logic_vector(3 downto 0);
-		data_out: out std_logic_vector(3 downto 0)
+		data_in: in std_logic_vector(15 downto 0);
+		data_out: out std_logic_vector(15 downto 0)
 	);
 end component;
 
