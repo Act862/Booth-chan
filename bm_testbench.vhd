@@ -11,48 +11,55 @@ architecture testbench of bm_testbench is
 component mult
 	port
 	(
-		q, m: in std_logic_vector(7 downto 0);
-		output: out std_logic_vector(15 downto 0)
+		q, m: in std_logic_vector(1 downto 0);
+		-- reset: in std_logic;
+		obs: out std_logic;
+		output: out std_logic_vector(3 downto 0)
 	);
 end component;
 
 -- signals
-signal tq, tm: std_logic_vector(7 downto 0);
-signal tout: std_logic_vector(15 downto 0);
+signal tq, tm: std_logic_vector(1 downto 0);
+signal tclk: std_logic;
+signal tout: std_logic_vector(3 downto 0);
 
 begin
 --	architecture
-	connect: mult port map(q => tq, m => tm, output=>tout);
+	connect: mult port map(q => tq, m => tm, obs => tclk, output=>tout);
 	process
 	begin
 --		0.
-		tq <= "00000000";
-		tm <= "00000000";
+		tq <= "00";
+		tm <= "00";
+		-- tr <= '1';
 		wait for 400 ns;
 		
 --		1.
-		tq <= "00001000";
-		tm <= "00000011";
+		tq <= "10";
+		tm <= "11";
+		-- tr <= '0';
 		wait for 400 ns;
 		
 --		2.
-		tq <= "00010010";
-		tm <= "00010000";
+		tq <= "10";
+		tm <= "00";
+		-- tr <= '0';
 		wait for 400 ns;
 		
 --		3.
-		tq <= "11111111";
-		tm <= "11111111";
+		tq <= "11";
+		tm <= "11";
+		-- tr <= '0';
 		wait for 400 ns;
 		
 -- 		4.
-		tq <= "11001101";
-		tm <= "00000010";
+		tq <= "11";
+		tm <= "10";
 		wait for 400 ns;
 
 --		5.
-		tq <= "01111111";
-		tm <= "01111111";
+		tq <= "01";
+		tm <= "11";
 		wait for 400 ns;
 		
 	end process;
